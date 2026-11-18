@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Hive | Health Monitoring</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #312e81, #581c87);
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 45px 20px;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        header h1 {
+            font-size: 45px;
+            letter-spacing: 5px;
+            color: #67e8f9;
+            text-shadow: 0 0 20px #06b6d4;
+        }
+
+        header p {
+            margin-top: 12px;
+            color: #ddd6fe;
+            font-size: 17px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            padding: 18px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #67e8f9;
+            transform: scale(1.1);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #67e8f9;
+            margin: 35px 0 25px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            backdrop-filter: blur(12px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+        }
+
+        img {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 450px;
+            margin-top: 15px;
+        }
+
+        video, iframe {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 12px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            align-items: center;
+        }
+
+        .media-grid iframe,
+        .media-grid video {
+            width: 100%;
+            height: 250px;
+            margin: 10px 0;
+        }
+
+        .pdf-frame {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background: rgba(0,0,0,0.3);
+            color: #c4b5fd;
+        }
+
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>PULSE HIVE</h1>
+    <p>Smart Wearable Health Monitoring System</p>
+</header>
+
+<nav>
+    <a href="#media">Media Elements</a>
+    <a href="#video">Videos</a>
+    <a href="#location">Location</a>
+    <a href="#pdf">Project PDF</a>
+</nav>
+
+<div class="container">
+
+    <h2 class="section-title" id="media">🎵 Audio & Image</h2>
+
+    <div class="card">
+        <h3>Listen to Pulse Hive</h3>
+        <audio controls>
+            <source src="pulse.ogg" type="audio/ogg">
+            Your browser does not support audio.
+        </audio>
+    </div>
+
+    <div class="card">
+        <h3>Pulse Hive Project Image</h3>
+        <img src="pulse hhive.webp" alt="Pulse Hive Project">
+    </div>
+
+    <h2 class="section-title" id="video">🎬 Video Gallery</h2>
+
+    <div class="media-grid">
+
+        <div class="card">
+            <h3>YouTube Video</h3>
+            <iframe
+                src="https://www.youtube.com/embed/_Lflb_l6X0Y"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="card">
+            <h3>Project Explainer Video</h3>
+            <video controls>
+                <source src="Pulse_Hive_Explainer_Video.mp4"
+                type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
+
+    </div>
+
+    <h2 class="section-title" id="location">📍 Our Location</h2>
+
+    <div class="card">
+        <h3>Karunya University, Coimbatore</h3>
+
+        <iframe
+            src="https://maps.google.com/maps?q=Karunya%20University%20Coimbatore&output=embed"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <h2 class="section-title" id="pdf">📄 Project Documentation</h2>
+
+    <div class="card">
+        <h3>Pulse Hive PDF Report</h3>
+
+        <iframe
+            class="pdf-frame"
+            src="Pulse_Hive_Wearable_Health_Monitoring.pdf">
+        </iframe>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 PULSE HIVE | Smart Health Monitoring System</p>
+    <p>Designed with ❤️ using HTML & CSS</p>
+</footer>
+
+</body>
+</html>
